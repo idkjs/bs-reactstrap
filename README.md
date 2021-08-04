@@ -29,14 +29,9 @@ Add `@ahrefs/bs-reactstrap` to `bs-dependencies` in your `bsconfig.json`!
 ```reason
 open BsReactstrap;
 
-let component = ReasonReact.statelessComponent("SomeComponent");
-
-let make = (~onClick, _children) => {
-  ...component,
-
-  render: _self => {
-    <Button color="primary" size="lg" onClick> "Hello" </Button>;
-  },
+[@react.component]
+let make = (~onClick) => {
+    <Button color="primary" size="lg" onClick> "Hello"->React.string </Button>;
 };
 ```
 

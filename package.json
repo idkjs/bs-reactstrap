@@ -26,6 +26,7 @@
     "reason-react": "^0.9.1"
   },
   "dependencies": {
+    "re-classnames": "^5.0.1",
     "reactstrap": "^8.9.0"
   },
   "peerDependencies": {
