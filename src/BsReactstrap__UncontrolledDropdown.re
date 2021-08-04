@@ -10,7 +10,7 @@ external make:
     ~previous: 'd=?,
     ~goToIndex: 'e=?,
     ~nav: bool=?,
-    ~navbar: bool=?,
+    ~inNavbar: bool=?,
     ~children: React.element=?,
     unit
   ) =>
