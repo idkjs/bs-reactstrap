@@ -8,7 +8,7 @@ external make:
     ~header: bool=?,
     ~onClick: 'b=?,
     ~to_: string=?,
-    ~id: string=?,
+    ~idactiveClassNameocamllsp: string=?,
     ~className: string=?,
     ~activeClassName: string=?,
     ~cssModule: 'c=?,
