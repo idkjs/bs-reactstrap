@@ -139,3 +139,4 @@ module Table = BsReactstrap__Table;
 module Tooltip = BsReactstrap__Tooltip;
 
 module UncontrolledCarousel = BsReactstrap__UncontrolledCarousel;
+module UncontrolledDropdown = BsReactstrap__UncontrolledDropdown;
