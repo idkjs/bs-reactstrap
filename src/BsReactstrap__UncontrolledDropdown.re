@@ -25,7 +25,7 @@ external make:
     ~isOpen: bool=?,
     ~nav: bool=?,
     ~active: bool=?,
-    ~addonType: (bool, [ | `prepend | `append]),
+    // ~addonType: (bool, [ | `prepend | `append]),
     ~size: string=?,
     ~inNavbar: bool=?,
     ~setActiveFromChild: bool=?,
