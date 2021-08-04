@@ -10,16 +10,3 @@ external make:
   ) =>
   React.element =
   "NavbarToggler";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make = (~tag=?, ~_type=?, ~className=?, ~cssModule=?, children) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(~tag?, ~_type?, ~className?, ~cssModule?, ~children, ()),
-      children,
-    );
-  };
-};

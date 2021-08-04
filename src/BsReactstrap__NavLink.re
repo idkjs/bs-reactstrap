@@ -14,38 +14,3 @@ external make:
   ) =>
   React.element =
   "NavLink";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~tag=?,
-        ~innerRef=?,
-        ~disabled=?,
-        ~active=?,
-        ~className=?,
-        ~cssModule=?,
-        ~onClick=?,
-        ~href=?,
-        children,
-      ) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~tag?,
-        ~innerRef?,
-        ~disabled?,
-        ~active?,
-        ~className?,
-        ~cssModule?,
-        ~onClick?,
-        ~href?,
-        ~children,
-        (),
-      ),
-      children,
-    );
-  };
-};

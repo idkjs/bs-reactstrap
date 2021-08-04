@@ -13,36 +13,3 @@ external make:
   ) =>
   React.element =
   "ButtonGroup";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~tag=?,
-        ~ariaLabel=?,
-        ~className=?,
-        ~cssModule=?,
-        ~role=?,
-        ~size=?,
-        ~vertical=?,
-        children,
-      ) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~tag?,
-        ~ariaLabel?,
-        ~className?,
-        ~cssModule?,
-        ~role?,
-        ~size?,
-        ~vertical?,
-        ~children,
-        (),
-      ),
-      children,
-    );
-  };
-};

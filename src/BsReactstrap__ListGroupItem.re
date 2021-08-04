@@ -13,36 +13,3 @@ external make:
   ) =>
   React.element =
   "ListGroupItem";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~tag=?,
-        ~active=?,
-        ~disabled=?,
-        ~color=?,
-        ~action=?,
-        ~className=?,
-        ~cssModule=?,
-        children,
-      ) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~tag?,
-        ~active?,
-        ~disabled?,
-        ~color?,
-        ~action?,
-        ~className?,
-        ~cssModule?,
-        ~children,
-        (),
-      ),
-      children,
-    );
-  };
-};

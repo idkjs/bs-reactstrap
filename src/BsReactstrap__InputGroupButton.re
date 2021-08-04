@@ -12,34 +12,3 @@ external make:
   ) =>
   React.element =
   "InputGroupButton";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~tag=?,
-        ~addonType,
-        ~groupClassName=?,
-        ~groupAttributes=?,
-        ~className=?,
-        ~cssModule=?,
-        children,
-      ) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~tag?,
-        ~addonType,
-        ~groupClassName?,
-        ~groupAttributes?,
-        ~className?,
-        ~cssModule?,
-        ~children,
-        (),
-      ),
-      children,
-    );
-  };
-};

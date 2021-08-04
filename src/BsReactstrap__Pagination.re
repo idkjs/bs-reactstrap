@@ -10,16 +10,3 @@ external make:
   ) =>
   React.element =
   "Pagination";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make = (~className=?, ~cssModule=?, ~size=?, ~tag=?, children) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(~className?, ~cssModule?, ~size?, ~tag?, ~children, ()),
-      children,
-    );
-  };
-};

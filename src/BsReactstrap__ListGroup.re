@@ -10,30 +10,3 @@ external make:
   ) =>
   React.element =
   "ListGroup";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make =
-      (
-        ~tag=?,
-        ~flush=?,
-        ~className=?,
-        ~cssModule=?,
-        children,
-      ) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(
-        ~tag?,
-        ~flush?,
-        ~className?,
-        ~cssModule?,
-        ~children,
-        (),
-      ),
-      children,
-    );
-  };
-};

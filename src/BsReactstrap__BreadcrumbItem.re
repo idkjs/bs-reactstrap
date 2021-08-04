@@ -10,16 +10,3 @@ external make:
   ) =>
   React.element =
   "BreadcrumbItem";
-
-module Jsx2 = {
-  let component = ReasonReact.statelessComponent(__MODULE__);
-
-  let make = (~tag=?, ~active=?, ~className=?, ~cssModule=?, children) => {
-    let children = React.array(children);
-    ReasonReactCompat.wrapReactForReasonReact(
-      make,
-      makeProps(~tag?, ~active?, ~className?, ~cssModule?, ~children, ()),
-      children,
-    );
-  };
-};
