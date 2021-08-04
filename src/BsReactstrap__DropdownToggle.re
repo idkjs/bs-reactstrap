@@ -1,6 +1,7 @@
 [@bs.module "reactstrap"] [@react.component]
 external make:
   (
+    ~id: string=?,
     ~caret: bool=?,
     ~color: string=?,
     ~className: string=?,
