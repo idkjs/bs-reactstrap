@@ -9,6 +9,9 @@ external make:
     ~cssModule: 'c=?,
     ~onClick: 'd=?,
     ~href: 'e=?,
+    ~to_: string=?,
+    ~exact: bool=?,
+    ~activeClassName: string=?,
     ~children: React.element=?,
     unit
   ) =>
