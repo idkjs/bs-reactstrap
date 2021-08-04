@@ -1,6 +1,6 @@
 [@bs.module "reactstrap"] [@react.component]
 external make:
-  (
+  (    ~id: string=?,
     ~active: bool=?,
     ~disabled: bool=?,
     ~divider: bool=?,
